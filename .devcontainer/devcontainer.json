@@ -1,0 +1,30 @@
+{
+  "name": "Go cobra",
+  "dockerComposeFile": [
+    "compose.yml"
+  ],
+  "service": "main",
+  "workspaceFolder": "/workspaces/main",
+  "overrideCommand": true,
+  "shutdownAction": "stopCompose",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/apt-packages:1": {
+      "packages": "bash-completion"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bierner.markdown-emoji",
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "golang.go",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  "postCreateCommand": {
+    "Install cobra-cli": "go install github.com/spf13/cobra-cli@latest"
+  }
+}

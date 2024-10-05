@@ -1,0 +1,8 @@
+---
+services:
+  main:
+    image: mcr.microsoft.com/vscode/devcontainers/go:1.22
+    volumes:
+      - type: bind
+        source: ..
+        target: /workspaces/main
