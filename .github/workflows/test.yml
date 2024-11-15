@@ -29,7 +29,7 @@ jobs:
           go test -coverprofile=/tmp/coverage.txt $(go list ./...)
           go tool cover -func=/tmp/coverage.txt
       - name: Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: /tmp/coverage.txt
           token: ${{ secrets.CODECOV_TOKEN }}
